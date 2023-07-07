@@ -3,13 +3,14 @@ trigger:
     include:
       - main
       - azure-pipelines
+      - develop
     exclude:
       - releases/old*
 jobs:
   - job: Windows
     pool:
-      name: az400mlab-pool1
+      name: MyownAgent
       demands:
-        - agent.name -equals agent name
+        - agent.name -equals DESKTOP-TC8GBQ9
     steps:
       - script: echo hello from Windows
