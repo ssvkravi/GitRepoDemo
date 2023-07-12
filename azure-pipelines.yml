@@ -18,7 +18,7 @@ jobs:
         inputs:
           allowRedirectDowngrade: true
           terraformVersion: 'latest'
-          downloadUrl: 'https://www.terraform.io/downloads.html'
+          
          
       - task: TerraformCLI@0
         inputs:
