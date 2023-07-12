@@ -21,15 +21,15 @@ jobs:
           backendType: 'selfConfigured'
           allowTelemetryCollection: true
       - task: TerraformCLI@0
-         inputs:
-           command: 'validate'
-           allowTelemetryCollection: true
+        inputs:
+          command: 'validate'
+          allowTelemetryCollection: true
        
       - task: TerraformCLI@0
-         inputs:
-           command: 'plan'
-           allowTelemetryCollection: true
+        inputs:
+          command: 'plan'
+          allowTelemetryCollection: true
       - task: TerraformCLI@0
-          inputs:
-            command: 'apply'
-            allowTelemetryCollection: true
+        inputs:
+          command: 'apply'
+          allowTelemetryCollection: true
