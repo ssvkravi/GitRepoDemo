@@ -16,9 +16,10 @@ jobs:
       - script: echo hello from Windows
       - task: TerraformInstaller@0
         inputs:
-          terraformVersion: 'latest'
-          downloadUrl: 'http://www.terraform.io/downloads.html'
           allowRedirectDowngrade: true
+          terraformVersion: 'latest'
+          downloadUrl: 'https://www.terraform.io/downloads.html'
+         
       - task: TerraformCLI@0
         inputs:
           command: 'init'
