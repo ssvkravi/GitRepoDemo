@@ -32,7 +32,7 @@ jobs:
        
       - task: TerraformCLI@0
         inputs:
-          command: 'plan --auto-approve'
+          command: 'plan -auto-approve'
           allowTelemetryCollection: true
       - task: TerraformCLI@0
         inputs:
