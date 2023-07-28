@@ -14,7 +14,9 @@ jobs:
         - agent.name -equals DESKTOP-TC8GBQ9
     steps:
       - script: echo hello from Windows
-     
+      - task: TerraformInstaller@0
+        inputs:
+        terraformVersion: 'latest'
       - task: TerraformTaskV4@4
         inputs:
           provider: 'azurerm'
