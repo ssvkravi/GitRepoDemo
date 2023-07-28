@@ -20,21 +20,21 @@ jobs:
           terraformVersion: 'latest'
           
          
-      - task: TerraformCLI@0
+      - task: TerraformTaskV4@4
         inputs:
           command: 'init'
           backendType: 'selfConfigured'
           allowTelemetryCollection: true
-      - task: TerraformCLI@0
+      - task: TerraformTaskV4@4
         inputs:
           command: 'validate'
           allowTelemetryCollection: true
        
-      - task: TerraformCLI@0
+      - task: TerraformTaskV4@4
         inputs:
           command: 'plan'
           allowTelemetryCollection: true
-      - task: TerraformCLI@0
+      - task: TerraformTaskV4@4
         inputs:
           command: 'apply -input=false -auto-approve'
           allowTelemetryCollection: true
