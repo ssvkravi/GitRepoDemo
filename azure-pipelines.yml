@@ -18,7 +18,11 @@ jobs:
         inputs:
           provider: 'azurerm'
           command: 'init'
-          backendServiceArm: 'azurePipeLinename'
+          backendServiceArm: 'svkTerraNewPipeLine'
+          backendAzureRmResourceGroupName: 'SvkTerraResGrp'
+          backendAzureRmStorageAccountName: 'svkterrastoreaccname'
+          backendAzureRmContainerName: 'terraform.tfstate'
+          backendAzureRmKey: 'tfstate'
       - task: TerraformTaskV4@4
         inputs:
           provider: 'azurerm'
@@ -34,3 +38,4 @@ jobs:
           provider: 'azurerm'
           command: 'apply'
           
+   
