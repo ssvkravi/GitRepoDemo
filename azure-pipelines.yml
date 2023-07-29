@@ -18,7 +18,7 @@ jobs:
         inputs:
           provider: 'azurerm'
           command: 'init'
-         
+          backendServiceArm: 'azurePipeLinename'
       - task: TerraformTaskV4@4
         inputs:
           provider: 'azurerm'
