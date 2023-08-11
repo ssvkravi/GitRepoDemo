@@ -17,7 +17,7 @@ jobs:
       - task: TerraformTaskV4@4
         inputs:
           provider: 'azurerm'
-          command: 'init -upgrade'
+          command: 'init'
           backendServiceArm: 'svkTerraNewPipeLine'
           backendAzureRmResourceGroupName: 'SvkTerraResGrp'
           backendAzureRmStorageAccountName: 'svkterrastoreaccname'
