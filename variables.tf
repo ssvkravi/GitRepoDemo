@@ -7,6 +7,4 @@ variable "rg_name" {
   type        = string
   description = "The location for the deployment"
 }
-variable "azurerm_create_resource_group" {
-    type = bool
-}
+
