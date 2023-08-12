@@ -8,43 +8,43 @@ trigger:
       - releases/old*
 stages:
   - stage: A
-jobs:
-  - job: Windows
-    pool:
-      name: MyownAgent
-      demands:
-        - agent.name -equals DESKTOP-TC8GBQ9
-    steps:
-      - script: echo hello from Windows
-      - task: TerraformTaskV4@4
-        inputs:
-          provider: 'azurerm'
-          command: 'init'
-          backendServiceArm: 'svkTerraNewPipeLine'
-          backendAzureRmResourceGroupName: 'SvkTerraResGrp'
-          backendAzureRmStorageAccountName: 'svkterrastoreaccname'
-          backendAzureRmContainerName: 'terraform.tfstate'
-          backendAzureRmKey: 'tfstate'
-      - task: TerraformTaskV4@4
-        inputs:
-          provider: 'azurerm'
-          command: 'validate'
-                
-      - task: TerraformTaskV4@4
-        inputs:
-          provider: 'azurerm'
-          environmentServiceNameAzureRM: 'svkTerraNewPipeLine'
-          command: 'plan'
-          
-      # - task: TerraformTaskV4@4
-      #   inputs:
-      #     provider: 'azurerm'
-      #     environmentServiceNameAzureRM: 'svkTerraNewPipeLine'
-      #     command: 'apply'
-      - task: TerraformTaskV4@4
-        inputs:
-          provider: 'azurerm'
-          environmentServiceNameAzureRM: 'svkTerraNewPipeLine'
-          command: 'destroy'
-          
+    jobs:
+      - job: Windows
+        pool:
+          name: MyownAgent
+          demands:
+            - agent.name -equals DESKTOP-TC8GBQ9
+        steps:
+          - script: echo hello from Windows
+          - task: TerraformTaskV4@4
+            inputs:
+              provider: 'azurerm'
+              command: 'init'
+              backendServiceArm: 'svkTerraNewPipeLine'
+              backendAzureRmResourceGroupName: 'SvkTerraResGrp'
+              backendAzureRmStorageAccountName: 'svkterrastoreaccname'
+              backendAzureRmContainerName: 'terraform.tfstate'
+              backendAzureRmKey: 'tfstate'
+          - task: TerraformTaskV4@4
+            inputs:
+              provider: 'azurerm'
+              command: 'validate'
+                    
+          - task: TerraformTaskV4@4
+            inputs:
+              provider: 'azurerm'
+              environmentServiceNameAzureRM: 'svkTerraNewPipeLine'
+              command: 'plan'
+              
+          # - task: TerraformTaskV4@4
+          #   inputs:
+          #     provider: 'azurerm'
+          #     environmentServiceNameAzureRM: 'svkTerraNewPipeLine'
+          #     command: 'apply'
+          - task: TerraformTaskV4@4
+            inputs:
+              provider: 'azurerm'
+              environmentServiceNameAzureRM: 'svkTerraNewPipeLine'
+              command: 'destroy'
+              
    
