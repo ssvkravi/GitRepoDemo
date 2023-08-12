@@ -12,7 +12,9 @@ stages:
     dependsOn: Test    # this stage runs after Test
   - stage: DeployUS2
     dependsOn: Test    # this stage runs in parallel with DeployUS1, after Test
-  
+  - stage: DeployEurope
+     dependsOn: DeployUS1        # this stage runs after DeployUS1 and DeployUS2
+
 jobs:
   - job: Windows
     pool:
