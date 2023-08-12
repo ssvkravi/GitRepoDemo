@@ -14,6 +14,14 @@ stages:
           name: MyownAgent
           demands:
             - agent.name -equals DESKTOP-TC8GBQ9
+stages:
+  - stage: B
+    jobs:
+      - job: Windows
+        pool:
+          name: MyownAgent
+          demands:
+            - agent.name -equals DESKTOP-TC8GBQ9            
         steps:
           - script: echo hello from Windows
           - task: TerraformTaskV4@4
