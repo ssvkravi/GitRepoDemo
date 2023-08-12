@@ -51,10 +51,10 @@ stages:
               provider: 'azurerm'
               environmentServiceNameAzureRM: 'svkTerraNewPipeLine'
               command: 'apply'
-          - task: TerraformTaskV4@4
-            inputs:
-              provider: 'azurerm'
-              environmentServiceNameAzureRM: 'svkTerraNewPipeLine'
-              command: 'destroy'
+          # - task: TerraformTaskV4@4
+          #   inputs:
+          #     provider: 'azurerm'
+          #     environmentServiceNameAzureRM: 'svkTerraNewPipeLine'
+          #     command: 'destroy'
               
    
