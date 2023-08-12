@@ -14,7 +14,7 @@ stages:
           name: MyownAgent
           demands:
             - agent.name -equals DESKTOP-TC8GBQ9
-stages:
+
   - stage: B
     jobs:
       - job: Windows
