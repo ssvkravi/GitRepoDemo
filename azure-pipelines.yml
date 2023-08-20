@@ -37,13 +37,13 @@ stages:
             inputs:
               provider: 'azurerm'
               environmentServiceNameAzureRM: 'svkTerraNewPipeLine'
-              command: 'plan'
+              command: 'plan -auto-approve'
               
           - task: TerraformTaskV4@4
             inputs:
               provider: 'azurerm'
               environmentServiceNameAzureRM: 'svkTerraNewPipeLine'
-              command: 'apply'
+              command: 'apply -auto-approve'
           # - task: TerraformTaskV4@4
           #   inputs:
           #     provider: 'azurerm'
