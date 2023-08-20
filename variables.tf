@@ -1,4 +1,4 @@
-variable "group_name" {}
+
 # Project variables
 variable "rg_location" {
   type        = string
