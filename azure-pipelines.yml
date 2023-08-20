@@ -49,7 +49,7 @@ stages:
           #     provider: 'azurerm'
           #     environmentServiceNameAzureRM: 'svkTerraNewPipeLine'
           #     command: 'destroy'
-    - stage: B
+  - stage: B
     displayName: 'Deploy to the Prod environment'
     jobs:
       - job: Windows
